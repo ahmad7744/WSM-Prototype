@@ -1,13 +1,108 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "IBM Plex Mono", monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.digital-font {
+  font-family: Digital Numbers;
 }
+
+@font-face {
+  font-family: "Open-24-Display-St";
+  src: local("Open-24-Display-St"),
+    url("./fonts/Open-24-Display-St.ttf") format("ttf");
+}
+
+.hello {
+  font-family: "Open-24-Display-St";
+}
+
+.passcode-font {
+  font-family: "Work Sans", sans-serif;
+}
+
+.bg-color-passcode {
+  background: radial-gradient(
+      70.71% 70.71% at 50% 50%,
+      rgba(185, 191, 244, 0.13) 0%,
+      rgba(96, 107, 203, 0) 100%
+    ),
+    #000;
+}
+
+.box-pin-container {
+  position: relative;
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.5rem;
+  height: 2ch;
+  display: flex;
+  align-items: center;
+}
+.box-pin-input {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
+  letter-spacing: 1ch;
+
+  -moz-text-security: disc;
+  color: gray;
+  padding-left: 0.25ch;
+  height: 1.5ch;
+  margin-bottom: 0.05ch;
+
+  background: transparent;
+  width: 8ch;
+  
+  
+}
+
+.cell {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 1.5ch;
+  border-radius: 4px;
+  border: 0.651px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 30, 35, 0.1) 0%,
+    rgba(5, 5, 5, 0.1) 100%
+  );
+  box-shadow: 0px 1px 94px 20px rgba(73, 112, 251, 0.15);
+  backdrop-filter: blur(2px);
+
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+.box-style{
+  width: '110px';
+  height:'87px' ;
+  padding: '29px 0px 28px 0px';
+  justify-content: 'center';
+  align-items: center; 
+ border-radius: 4px;
+  border: '0.651px solid rgba(255, 255, 255, 0.20)';
+  background: 'linear-gradient(135deg, rgba(31, 30, 35, 0.10) 0%, rgba(5, 5, 5, 0.10) 100%)';
+  box-shadow: '0px 1px 94px 20px rgba(73, 112, 251, 0.15)';
+  backdrop-filter:'blur(2px)'; 
+  display: 'flex';
+  justify-content:center; 
+  align-items: center;
+  gap: 36px;
+} */
