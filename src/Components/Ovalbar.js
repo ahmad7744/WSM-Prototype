@@ -39,7 +39,7 @@ function Ovalbar() {
   }, []);
 
   return (
-    <div className="progress w-full ">
+    <div className="progress ">
       <div className="barOverflow">
         <div
           className="bar"

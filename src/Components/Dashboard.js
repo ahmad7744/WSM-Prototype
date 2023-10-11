@@ -4,8 +4,8 @@ import CountUp from "react-countup";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-bg">
-      <div className="w-full h-screen  bg-black opacity-80 mx-auto flex flex-col gap-[42px] ">
+    <div className="dashboard-bg w-full h-screen">
+      <div className=" bg-black h-screen opacity-80 mx-auto flex flex-col gap-[42px] ">
         <div className="border-v1">
           <div className="w-full max-w-[1440px]  mx-auto flex justify-between">
             <div className=" border-r border-[#27272A] pr-[32px] flex justify-center items-center ">
