@@ -1,31 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .digital-font {
+  font-family: Digital Numbers;
+} */
+
+@font-face {
+  font-family: "Open-24-Display-St";
+  src: url("/public/fonts/Open-24-Display-St.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Digital Numbers Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/public/fonts/DigitalNumbers-Regular.woff") format("woff");
+}
+.font-Digital {
+  font-family: "Digital Numbers Regular";
+}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 body {
   margin: 0;
   font-family: "IBM Plex Mono", monospace;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.digital-font {
-  font-family: Digital Numbers;
+.box-bg {
+  border-radius: 12px;
+  border: 4px solid rgba(39, 39, 42, 0.6);
+  background: linear-gradient(
+      314deg,
+      rgba(15, 164, 70, 0.2) 1.67%,
+      rgba(13, 139, 59, 0.17) 27.23%,
+      rgba(0, 0, 0, 0) 98.81%,
+      rgba(15, 164, 70, 0) 98.81%
+    ),
+    #09090b;
 }
 
-@font-face {
-  font-family: "Open-24-Display-St";
-  src: local("Open-24-Display-St"),
-    url("./fonts/Open-24-Display-St.ttf") format("ttf");
+.box-bg-b {
+  border-radius: 12px;
+  border: 4px solid rgba(39, 39, 42, 0.6);
+  background: #09090b;
 }
 
-.hello {
-  font-family: "Open-24-Display-St";
+.dasgboard-font {
+  font-family: "Montserrat", sans-serif;
+}
+.data-font {
+  font-family: "Inter", sans-serif;
 }
 
-.passcode-font {
+/* .passcode-font {
   font-family: "Work Sans", sans-serif;
-}
+} */
 
 .bg-color-passcode {
   background: radial-gradient(
@@ -38,15 +68,15 @@ body {
 
 .box-pin-container {
   position: relative;
-  font-family: "Work Sans", sans-serif;
+  /* font-family: "Work Sans", sans-serif; */
   font-size: 2.5rem;
   height: 2ch;
   display: flex;
   align-items: center;
 }
 .box-pin-input {
-  font-family: inherit;
-  font-size: inherit;
+  /* font-family: inherit; */
+  /* font-size: inherit; */
   border: none;
   outline: none;
   padding: 0;
@@ -60,8 +90,6 @@ body {
 
   background: transparent;
   width: 8ch;
-  
-  
 }
 
 .cell {
@@ -79,8 +107,6 @@ body {
   );
   box-shadow: 0px 1px 94px 20px rgba(73, 112, 251, 0.15);
   backdrop-filter: blur(2px);
-
-
 }
 
 .container {
@@ -106,3 +132,107 @@ body {
   align-items: center;
   gap: 36px;
 } */
+
+.cvs-style {
+  border-radius: 4px;
+  border: 0.651px dashed rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 30, 35, 0.1) 0%,
+    rgba(5, 5, 5, 0.1) 100%
+  );
+  box-shadow: 0px 1px 94px 20px rgba(73, 112, 251, 0.15);
+  backdrop-filter: blur(2px);
+  width: 1062px;
+  padding: 40px 0px 40px 0px;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  padding: 12px 24px;
+  width: 186px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(
+      314deg,
+      rgba(110, 96, 244, 0.2) 1.67%,
+      rgba(127, 119, 205, 0.17) 27.23%,
+      rgba(0, 0, 0, 0) 98.81%,
+      rgba(160, 152, 240, 0) 98.81%
+    ),
+    #09090b;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.dashboard-bg {
+  background: radial-gradient(
+      70.71% 70.71% at 50% 50%,
+      rgba(53, 53, 53, 0.3) 0%,
+      rgba(53, 53, 53, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.8);
+}
+
+.webshop-font {
+  /* font-family: Montserrat; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.progress {
+  position: relative;
+  margin: 4px;
+  float: left;
+  text-align: center;
+}
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 90px;
+  height: 45px; /* Half circle (overflow) */
+  margin-bottom: -14px; /* bring the numbers up */
+}
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px; /* full circle! */
+  border-radius: 60%;
+  box-sizing: border-box;
+  border: 10px solid #eee; /* half gray, */
+  border-bottom-color: #0bf; /* half azure */
+  border-right-color: #0bf;
+}
+
+.border-v {
+  border-left: 1px solid #27272a;
+  height: 135px;
+}
+
+.border-v1 {
+  border-radius: 1px;
+  border: 1px solid var(--Zinc-800, #27272a);
+}
+
+.border-v2 {
+  border-radius: 12px;
+  border: 1px solid var(--Zinc-800, #27272a);
+  background: #09090b;
+}

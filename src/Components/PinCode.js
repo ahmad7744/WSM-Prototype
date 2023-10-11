@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-function PinCodeInput() {
+function PinCode({ onPinEntered }) {
   const [pin, setPin] = useState(["", "", "", "", "", ""]);
   const inputRefs = [
     useRef(),
@@ -21,6 +21,11 @@ function PinCodeInput() {
     }
 
     setPin(newPin);
+
+ 
+    if (newPin.every(digit => digit !== "")) {
+      onPinEntered(); 
+    }
   };
 
   const handleInputKeyDown = (event, index) => {
@@ -64,11 +69,10 @@ function PinCodeInput() {
               border: "none",
               outline: "none",
               padding: "0",
-              letterSpacing: "1ch",
               color: "white",
               background: "transparent",
               width: "110px",
-              textAlign:"center"
+              textAlign: "center"
             }}
           />
         </div>
@@ -77,4 +81,4 @@ function PinCodeInput() {
   );
 }
 
-export default PinCodeInput;
+export default PinCode;
