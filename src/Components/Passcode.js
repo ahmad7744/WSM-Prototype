@@ -8,7 +8,7 @@ const Passcode = (props) => {
   };
 
   const handleSubmitPasscode = () => {
-    props.onPasscodeSubmit(); // Notify App.js to switch to Uploadfile
+    props.onPasscodeSubmit(); 
   };
 
   return (

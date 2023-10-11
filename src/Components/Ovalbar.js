@@ -39,15 +39,14 @@ function Ovalbar() {
   }, []);
 
   return (
-    <div className="progress">
+    <div className="progress w-full ">
       <div className="barOverflow">
         <div
           className="bar"
           style={{ transform: `rotate(${45 + progress * 1.8}deg)` }}
         ></div>
+        <p className='text-lime-400 text-3xl font-normal font-Digital leading-[30px]'>{progress}%</p>
       </div>
-    
-      <span>{progress}%</span>
     </div>
   );
 }
