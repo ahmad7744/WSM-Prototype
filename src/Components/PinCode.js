@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
-function PinCode({ onPinEntered }) {
+function PinCode({ onPinEntered, onIncorrectPin }) {
   const [pin, setPin] = useState(["", "", "", "", "", ""]);
   const inputRefs = [
     useRef(),
@@ -10,6 +10,16 @@ function PinCode({ onPinEntered }) {
     useRef(),
     useRef(),
   ];
+
+  useEffect(() => {
+    speak("Please Enter your Passcode");
+  }, []);
+
+  const speak = (text) => {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
+  };
 
   const handleInputChange = (event, index) => {
     const { value } = event.target;
@@ -22,9 +32,16 @@ function PinCode({ onPinEntered }) {
 
     setPin(newPin);
 
- 
     if (newPin.every(digit => digit !== "")) {
-      onPinEntered(); 
+      if (newPin.join("") === "000000") {
+        speak("Passcode is correct. Access granted.");
+        onPinEntered();
+      } else {
+        speak("Please Enter Right Passcode");
+        if (onIncorrectPin) {
+          onIncorrectPin();
+        }
+      }
     }
   };
 
