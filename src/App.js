@@ -14,18 +14,13 @@ function App() {
     setCurrentPage('dashboard');
   };
 
-  
-
   return (
     <div className="">
       {currentPage === 'passcode' && (
-        <Passcode
-          onPasscodeSubmit={handlePasscodeSubmit}
-         
-        />
+        <Passcode onPasscodeSubmit={handlePasscodeSubmit} />
       )}
       {currentPage === 'uploadfile' && (
-        <Uploadfile onComplete={handleFileUploadComplete} />
+        <Uploadfile onFileUploadComplete={handleFileUploadComplete} />
       )}
       {currentPage === 'dashboard' && <Dashboard />}
     </div>
