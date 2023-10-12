@@ -75,7 +75,7 @@ const Dashboard = () => {
                 <img src="./images/v-lines.png" alt="" />
               </div>
             </div>
-            <div className="flex flex-col items-center relative">
+            {/* <div className="flex flex-col items-center relative">
               <img src="./images/progressbar.png" alt="" />
               <div className="absolute z-1 top-12 flex flex-col items-center gap-[10px]">
                 <p className="text-lime-400 text-3xl font-normal font-Digital leading-[30px]">
@@ -85,16 +85,16 @@ const Dashboard = () => {
                   Progress
                 </p>
               </div>
-            </div>
-            {/* <Ovalbar/> */}
+            </div> */}
+            <Ovalbar/>
           </div>
           <div>
             <div className="">
               <img src="./images/multi-lines.png" alt="" />
             </div>
           </div>
-          <div className="grid grid-cols-6 w-full max-w-[1280px] gap-8">
-            <div className="box-bg flex flex-col gap-6 pl-4 pr-[35.67px] py-[49px] ">
+          <div className="grid grid-cols-6 w-full max-w-[1280px]  gap-8">
+            <div className="box-bg flex flex-col gap-6 pl-4 pr-[35.67px] py-[49px] roll-in-left ">
               <p className="text-white text-[40px] font-normal font-Digital leading-10">
               <CountUp start={0} end={342} duration={10} />
               </p>
