@@ -1,6 +1,11 @@
 import React from "react";
 import Ovalbar from "./Ovalbar";
 import CountUp from "react-countup";
+import Blink from "./Blink";
+import Linea from "./Linea";
+import Lineb from "./Lineb";
+import Linec from "./Linec";
+import Lined from "./Lined";
 
 const Dashboard = () => {
   return (
@@ -43,7 +48,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center ">
           <div className="w-full max-w-[1280px] border-v2 mx-auto pt-[24px] pr-[24px] pl-[24px] flex justify-between items-center">
             <div className="w-full max-w-[272px] flex flex-col gap-4">
               <p className="text-zinc-400 text-lg font-normal data-font leading-[18px]">
@@ -88,12 +93,26 @@ const Dashboard = () => {
             </div> */}
             <Ovalbar/>
           </div>
-          <div>
-            <div className="">
-              <img src="./images/multi-lines.png" alt="" />
+          <div className="">
+            <div className="flex relative z-0 right-[333px] ">
+              {/* <img src="./images/multi-lines.png" alt="" /> */}
+              <Blink/>
+              <div className="absolute top-0 right-[40px] z-[-1] ">
+              <Linea/>
+
+              </div>
+              <div className="absolute right-[40px] z-[-1]">
+                <Lineb/>
+              </div>
+              <div className="absolute left-[458px] z-[-1]">
+                <Linec/>
+              </div>
+              <div className="absolute left-[458px] z-[-1]">
+                <Lined/>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-6 w-full max-w-[1280px]  gap-8">
+          <div className="grid grid-cols-6 w-full max-w-[1280px]   gap-8">
             <div className="box-bg flex flex-col gap-6 pl-4 pr-[35.67px] py-[49px] roll-in-left ">
               <p className="text-white text-[40px] font-normal font-Digital leading-10">
               <CountUp start={0} end={342} duration={10} />

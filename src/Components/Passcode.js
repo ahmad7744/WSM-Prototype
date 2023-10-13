@@ -1,5 +1,6 @@
 import React from 'react';
 import PinCode from './PinCode';
+import Blink from './Blink';
 
 
 const Passcode = (props) => {
