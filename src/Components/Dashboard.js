@@ -49,8 +49,8 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="w-full flex flex-col items-center ">
-          <div className="w-full max-w-[1280px] border-v2 mx-auto pt-[24px] pr-[24px] pl-[24px] flex justify-between items-center">
-            <div className="w-full max-w-[272px] flex flex-col gap-4">
+          <div className="w-full max-w-[1280px] border-v2 mx-auto  pr-[24px] pl-[24px] flex justify-between items-center">
+            <div className="w-full max-w-[272px] flex flex-col gap-4 border-r border-[#27272A]">
               <p className="text-zinc-400 text-lg font-normal data-font leading-[18px]">
                 Current dataset
               </p>
@@ -58,13 +58,13 @@ const Dashboard = () => {
                 Primary Brands
               </p>
             </div>
-            <div className="w-full max-w-[272px] flex flex-col gap-3 ">
+            <div className="w-full max-w-[272px] flex flex-col gap-3 border-r pr-4 border-[#27272A]">
               <p className="text-zinc-400 text-lg font-normal leading-[18px]">
                 Total Rows
               </p>
               <div className="flex items-center justify-between">
                 <p className="text-white text-3xl font-normal font-Digital leading-[45px]">
-                <CountUp start={0} end={376} duration={10} />
+                  <CountUp start={0} end={376} duration={10} />
                 </p>
                 <img src="./images/lines.png" alt="" />
               </div>
@@ -75,7 +75,7 @@ const Dashboard = () => {
               </p>
               <div className="flex items-center justify-between">
                 <p className="text-white text-3xl font-normal font-Digital leading-[45px]">
-                <CountUp start={0} end={16} duration={10} />
+                  <CountUp start={0} end={16} duration={10} />
                 </p>
                 <img src="./images/v-lines.png" alt="" />
               </div>
@@ -91,31 +91,32 @@ const Dashboard = () => {
                 </p>
               </div>
             </div> */}
-            <Ovalbar/>
+            <div className="border-l pt-4 border-[#27272A] pl-8">
+              <Ovalbar />
+            </div>
           </div>
           <div className="">
             <div className="flex relative z-0 right-[333px] ">
               {/* <img src="./images/multi-lines.png" alt="" /> */}
-              <Blink/>
+              <Blink />
               <div className="absolute top-0 right-[40px] z-[-1] ">
-              <Linea/>
-
+                <Linea />
               </div>
               <div className="absolute right-[40px] z-[-1]">
-                <Lineb/>
+                <Lineb />
               </div>
               <div className="absolute left-[458px] z-[-1]">
-                <Linec/>
+                <Linec />
               </div>
               <div className="absolute left-[458px] z-[-1]">
-                <Lined/>
+                <Lined />
               </div>
             </div>
           </div>
           <div className="grid grid-cols-6 w-full max-w-[1280px]   gap-8">
             <div className="box-bg flex flex-col gap-6 pl-4 pr-[35.67px] py-[49px] roll-in-left ">
               <p className="text-white text-[40px] font-normal font-Digital leading-10">
-              <CountUp start={0} end={342} duration={10} />
+                <CountUp start={0} end={342} duration={10} />
               </p>
               <p className="text-zinc-400 text-base font-normal leading-snug">
                 Titles Missing
@@ -140,7 +141,6 @@ const Dashboard = () => {
             <div className="box-bg-b flex flex-col gap-6  pl-4 pr-[30.67px] py-[38px]   ">
               <p className="text-white text-[40px] font-normal font-Digital  leading-10">
                 <CountUp start={0} end={392} duration={10} />
-                
               </p>
               <p className="text-zinc-400 text-base font-normal leading-snug">
                 Fitment Data Missing
@@ -149,7 +149,6 @@ const Dashboard = () => {
             <div className="box-bg-b flex flex-col gap-6 pl-4 pr-[30.67px] py-[38px]  ">
               <p className="text-white text-[40px] font-normal font-Digital  leading-10">
                 <CountUp start={0} end={202} duration={10} />
-                
               </p>
               <p className="text-zinc-400 text-base font-normal leading-snug">
                 Incorrect Categorisation
@@ -158,7 +157,6 @@ const Dashboard = () => {
             <div className="box-bg-b flex flex-col gap-6  pl-4 pr-[30.67px] py-[38px] ">
               <p className="text-white text-[40px] font-normal font-Digital  leading-10">
                 <CountUp start={0} end={942} duration={10} />
-                
               </p>
               <p className="text-zinc-400 text-base font-normal leading-snug">
                 Part Type Missing
