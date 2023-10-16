@@ -6,8 +6,20 @@ import Linea from "./Linea";
 import Lineb from "./Lineb";
 import Linec from "./Linec";
 import Lined from "./Lined";
+import { useState } from "react";
 
 const Dashboard = () => {
+  
+  const [imageSrc, setImageSrc] = useState('./images/pause-2.png');
+  const previousImageSrc = './images/pause-2.png';
+
+  const handleImageClick = () => {
+    const currentImageSrc = imageSrc;
+    const newImageSrc = currentImageSrc === './images/start.png' ? previousImageSrc : './images/start.png';
+    setImageSrc(newImageSrc);
+  };
+  
+
   return (
     <div className="dashboard-bg w-full  h-full">
       <div className=" bg-black h-full pb-[188px] opacity-80 mx-auto flex flex-col gap-[42px] ">
@@ -34,15 +46,17 @@ const Dashboard = () => {
                   alt=""
                   width={88}
                   height={88}
+                 
                 />
               </div>
               <div className="p-5">
                 <img
                   className="cursor-pointer shad rounded-full "
-                  src="./images/pause-2.png"
+                  src={imageSrc}
                   width={88}
                   height={88}
                   alt=""
+                  onClick={handleImageClick}
                 />
               </div>
             </div>

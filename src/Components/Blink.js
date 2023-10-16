@@ -35,6 +35,7 @@ function Blink() {
     gsap.to(newCircle, {
       opacity: 1,
       delay: 2,
+   
     });
   }, []);
 
@@ -61,6 +62,7 @@ function Blink() {
             <stop offset="1" stopColor="#0FA647" />
           </linearGradient>
         </defs>
+        
       </svg>
 
       {/* <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="-15 14 40 40" ref={newCircleRef}>
@@ -101,7 +103,7 @@ function Blink() {
       </svg> 
        */}
       <svg
-      className="shad-2 rounded-full ml-[35px] " 
+      className="shad-2 rounded-full ml-[35px]   " 
         width="12"
         height="12"
         viewBox="0 0 12 12"
