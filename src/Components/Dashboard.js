@@ -27,19 +27,19 @@ const Dashboard = () => {
             </div>
 
             <div className="flex">
-              <div className="flex items-center border-l border-r border-[#27272A] ">
+              <div className="flex items-center border-l border-r p-5 border-[#27272A] ">
                 <img
-                  className="cursor-pointer"
-                  src="./images/stop.png"
+                  className="cursor-pointer shad-1 rounded-full"
+                  src="./images/stop-2.png"
                   alt=""
-                  width={100}
-                  height={95}
+                  width={88}
+                  height={88}
                 />
               </div>
-              <div>
+              <div className="p-5">
                 <img
-                  className="cursor-pointer"
-                  src="./images/pause.png"
+                  className="cursor-pointer shad rounded-full "
+                  src="./images/pause-2.png"
                   width={88}
                   height={88}
                   alt=""
